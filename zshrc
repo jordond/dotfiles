@@ -33,8 +33,9 @@ alias stop="sudo systemctl stop"
 alias sdisable="sudo systemctl disable"
 alias reload="sudo systemctl daemon-reload"
 
-alias spindown="sudo /home/admin/scripts/spindown.sh"
-alias snapper="sudo /home/admin/scripts/runner.sh"
+alias fuck='sudo $(fc -ln -1)'
+alias fucking='sudo'
+alias install='apt-get install'
 
 alias sown="sudo chown -R nobody:nobody"
 alias smod="sudo chmod -R 777"
