@@ -33,6 +33,8 @@ alias stop="sudo systemctl stop"
 alias sdisable="sudo systemctl disable"
 alias reload="sudo systemctl daemon-reload"
 
+alias ss="ssh jordon@ssh.hoogit.ca"
+
 alias fuck='sudo $(fc -ln -1)'
 alias fucking='sudo'
 alias install='apt-get install'
