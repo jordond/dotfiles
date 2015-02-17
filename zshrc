@@ -48,6 +48,7 @@ alias perms=permissions
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
+alias s="ssh jordon@maverick.local"
 alias home="ssh jordon@dehoog.me"
 alias unraid="ssh root@10.0.0.3"
 alias lisa="ssh user@10.0.0.4"
