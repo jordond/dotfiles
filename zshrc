@@ -57,6 +57,8 @@ alias virsh="sudo virsh"
 alias list="sudo virsh list"
 alias psg="ps aux | grep "
 
+alias temps="sudo hddtemp /dev/sd[a-z]"
+
 #lxc stuff
 alias lstart="sudo lxc-start -n"
 alias lstop="sudo lxc-stop -n"
