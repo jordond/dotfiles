@@ -33,6 +33,10 @@ alias stop="sudo systemctl stop"
 alias sdisable="sudo systemctl disable"
 alias reload="sudo systemctl daemon-reload"
 
+alias s="ssh jordon@maverick.local"
+alias ss="ssh jordon@ssh.hoogit.ca"
+alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
+
 alias fuck='sudo $(fc -ln -1)'
 alias fucking='sudo'
 alias install='apt-get install'
@@ -46,12 +50,6 @@ function permissions {
 alias perms=permissions
 
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
-
-alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
-alias home="ssh jordon@dehoog.me"
-alias unraid="ssh root@10.0.0.3"
-alias lisa="ssh user@10.0.0.4"
-alias owncloud="ssh root@10.0.0.5"
 
 alias virsh="sudo virsh"
 alias list="sudo virsh list"
@@ -68,23 +66,12 @@ alias linfo="sudo lxc-info -n"
 alias ltop="sudo lxc-top -n"
 alias ldestroy="sudo lxc-destroy -n"
 
-function commitNPush {
-	msg=$1
-	for arg in ${@:2}
-	do
-		msg="$msg $arg"	    
-	done
-	git commit -m $msg
-	git push	
-}
-alias gcnp=commitNPush
-
 function makeNChangeDirectory {
 	mkdir $1 && cd $1
 }
 alias mkcd="makeNChangeDirectory"
 
 v() {
-command="$*"
-vagrant ssh -c "cd /vagrant && $command"
+	command="$*"
+	vagrant ssh -c "cd /vagrant && $command"
 }
