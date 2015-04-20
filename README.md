@@ -5,4 +5,4 @@ My dotfiles
 * zsh
 * git
 
-Install script for new machines coming soon.
+Added in a quick and easy copy script
