@@ -24,6 +24,7 @@ esac
 
 ## Aliases
 
+alias code="cd $HOME/code"
 alias z="source ~/.zshrc"
 
 alias upgrade="sudo packer -Syu --noconfirm --noedit"
@@ -35,7 +36,7 @@ alias stop="sudo systemctl stop"
 alias sdisable="sudo systemctl disable"
 alias reload="sudo systemctl daemon-reload"
 
-alias s="ssh jordon@maverick.local"
+alias s="ssh jordon@maverick"
 alias ss="ssh jordon@ssh.hoogit.ca"
 alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
 
