@@ -6,6 +6,8 @@ dir=$(pwd)
 echo "Installing ohmyzsh..."
 cd $HOME
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh > /dev/null 2>&1
+rm -r $HOME/.zsh_custom
+ln -sv $dir/zsh_custom $HOME/zsh_custom
 
 echo "Removing any old files"
 cd $dir
