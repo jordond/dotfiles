@@ -1,7 +1,7 @@
 #!/bin/bash
 # Install all base packages listed here
 
-BASE_PACKAGES="git curl wget zsh pv ngrep dstat ncdu mtr ppa-purge unity-tweak-tool htop sshfs autossh tmux iftop iotop "
+BASE_PACKAGES="git curl wget zsh pv ngrep dstat ncdu mtr ppa-purge unity-tweak-tool htop sshfs autossh tmux iftop iotop vim "
 EXTRA_PACKAGES="deluge steam unrar p7zip-full"
 PPA_PACKAGES="plank numix-icon-theme-circle numix-plank-theme numix-gtk-theme numix-folders google-chrome-beta"
 
