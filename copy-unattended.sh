@@ -23,9 +23,6 @@ ln -sv $dir/zshrc $1/.zshrc
 ln -sv $dir/tmux.conf $1/.tmux.conf
 ln -sv $dir/git/gitconfig $1/.gitconfig
 
-echo "Copying ssh files"
-sudo cp -v $dir/ssh/* $ssh_dir
-
 echo
 echo "Dotfiles copying finished"
 
