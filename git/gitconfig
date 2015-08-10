@@ -13,10 +13,16 @@
 [alias]
 	c = commit
 	di = diff
-	s = status
+	s = status -bs
+	sl = status --long
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	co = checkout
-	amend = commit --amend
+	cob = checkout -b
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	wip = commit -am "WIP" 
+	amend = commit -a --amend
 	aa = add --all
+	cm = !git add -A && git commit -m	
 	b = branch
 	pom = push origin master
 	pod = push origin dev
