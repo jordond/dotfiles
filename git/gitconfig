@@ -1,40 +1,40 @@
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
 
 
 [user]
-	name = Jordon de Hoog
-	email = jordon.dehoog@gmail.com
+  name = Jordon de Hoog
+  email = jordon.dehoog@gmail.com
 
 [color]
-	ui = auto
+  ui = auto
 
 [alias]
-	c = commit
-	di = diff
-	s = status -bs
-	sl = status --long
-	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-	co = checkout
-	cob = checkout -b
-	save = !git add -A && git commit -m 'SAVEPOINT'
-	wip = commit -am "WIP" 
-	amend = commit -a --amend
-	aa = add --all
-	cm = !git add -A && git commit -m	
-	b = branch
-	pom = push origin master
-	pod = push origin dev
-	f = fetch
-	p = pull -ff
-	u = submodule update --init --recursive
-	l = "log --graph --pretty"
-	pup = push --set-upstream origin 
-	t = tag -a
-	po = push origin	
+  c = commit
+  di = diff
+  s = status -bs
+  sl = status --long
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  co = checkout
+  cob = checkout -b
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = commit -am "WIP"
+  amend = commit -a --amend
+  aa = add --all
+  cm = !git add -A && git commit -m
+  b = branch
+  pom = push origin master
+  pod = push origin dev
+  f = fetch
+  p = pull -ff
+  u = submodule update --init --recursive
+  l = "log --graph --pretty"
+  pup = push --set-upstream origin
+  t = tag -a
+  po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
 [gui]
-	recentrepo = C:/Users/jordond/git/wpf-snake
+  recentrepo = C:/Users/jordond/git/wpf-snake
 [push]
-	default = simple
+  default = simple
