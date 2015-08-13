@@ -28,6 +28,16 @@ esac
 alias code="cd $HOME/code"
 alias z="source ~/.zshrc"
 
+
+function gitclone {
+	git clone "git@github.com:$1"
+}
+function bitbucketclone {
+	git clone "git@bitbucket.org:$1"
+}
+alias gc="gitclone"
+alias bgc="bitbucketclone"
+
 alias upgrade="sudo packer -Syu --noconfirm --noedit"
 alias uu="sudo apt-get update && sudo apt-get upgrade"
 alias start="sudo systemctl start"
