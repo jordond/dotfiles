@@ -18,10 +18,12 @@ cd $dir
 rm $HOME/.zshrc > /dev/null 2>&1
 rm $HOME/.tmux.conf > /dev/null 2>&1
 rm $HOME/.gitconfig > /dev/null 2>&1
+rm $HOME/.gitignore > /dev/null 2>&1
 
 ln -sv $dir/zshrc $HOME/.zshrc
 ln -sv $dir/tmux.conf $HOME/.tmux.conf
 ln -sv $dir/git/gitconfig $HOME/.gitconfig
+ln -sv $dir/git/gitignore $HOME/.gitignore
 
 echo
 echo -n "Copy over ssh files? [y/N] "
