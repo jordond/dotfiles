@@ -29,6 +29,8 @@ echo
 echo -n "Copy over ssh files? [y/N] "
 read confirm
 if [[ $confirm == "y" || $confirm == "Y" ]]; then
+    mkdir -p ~/.ssh
+    cp $dir/ssh/authorized_keys ~/.ssh
     sudo cp -v $dir/ssh/* $ssh_dir
 fi
 

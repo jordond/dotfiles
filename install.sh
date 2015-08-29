@@ -10,6 +10,7 @@ function chooseDistro {
   echo "---------------------------------------------------------------"
   echo "-         Options:                                            -"
   echo "-                 u) Ubuntu * default                         -"
+  echo "-                uS) Ubuntu server                            -"
   echo "-                 q) Quit                                     -"
   echo "---------------------------------------------------------------"
   echo -n "Choose an option: [U/q] "
@@ -17,7 +18,9 @@ function chooseDistro {
   case $choice in
     "u"|"U"|""|" " )
       DISTRO="ubuntu"
-      echo "INSIDE chooseDistro"
+      runDistroScripts ;;
+    "u"|"U"|""|" " )
+      DISTRO="ubuntuServer"
       runDistroScripts ;;
     "q"|"Q" )
       exit 0 ;;
@@ -30,9 +33,10 @@ function chooseDistro {
 function runDistroScripts {
   case $DISTRO in
     "ubuntu" )
-      echo "INSIDE runDistroScripts"
       ./distros/ubuntu/install_packages.sh
       copy ;;
+    "ubuntuServer" )
+      ./distros/ubuntu/server_install.sh
     *)
     chooseDistro;
   esac

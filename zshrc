@@ -15,7 +15,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-pathBase=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin
+pathBase=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools
 pathWin=:/cygdrive/c/Program\ Files/nodejs:/cygdrive/c/Users/jordon/AppData/Roaming/npm:/cygdrive/c/HashiCorp/Vagrant/bin:/cygdrive/c/adb:/cygdrive/c/Program\ Files/gradle-2.1
 
 case `uname` in
