@@ -19,7 +19,7 @@ function chooseDistro {
     "u"|"U"|""|" " )
       DISTRO="ubuntu"
       runDistroScripts ;;
-    "u"|"U"|""|" " )
+    "u"|"U" )
       DISTRO="ubuntuServer"
       runDistroScripts ;;
     "q"|"Q" )
