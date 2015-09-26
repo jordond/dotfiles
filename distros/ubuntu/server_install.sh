@@ -6,7 +6,7 @@ EXTRA_PACKAGES="unrar p7zip-full hdparm hddtemp slurm snapraid rsnapshot"
 PPA_PACKAGES="git"
 
 NODEJS_URL="https://github.com/taaem/nodejs-linux-installer/releases/download/v0.3/node-install.sh"
-NODE_PACKAGES="node-inspector gulp yo bower"
+NODE_PACKAGES="gulp bower"
 
 echo "Need Root for installing packages"
 sudo sh -c 'echo "Got Root!"'

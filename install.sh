@@ -19,7 +19,7 @@ function chooseDistro {
     "u"|"U"|""|" " )
       DISTRO="ubuntu"
       runDistroScripts ;;
-    "u"|"U" )
+    "uS"|"US" )
       DISTRO="ubuntuServer"
       runDistroScripts ;;
     "q"|"Q" )
@@ -37,6 +37,7 @@ function runDistroScripts {
       copy ;;
     "ubuntuServer" )
       ./distros/ubuntu/server_install.sh
+      copy ;;
     *)
     chooseDistro;
   esac

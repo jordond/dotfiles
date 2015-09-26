@@ -57,10 +57,10 @@ alias install='apt-get install'
 
 alias www='cd /etc/nginx/www'
 
-alias sown="sudo chown -R nobody:nobody"
+alias sown="sudo chown -R nobody:nogroup"
 alias smod="sudo chmod -R 777"
 function permissions {
-	sudo chown -R nobody:nobody $1
+	sudo chown -R nobody:nogroup $1
 	sudo chmod -R 777 $1
 }
 alias perms=permissions
