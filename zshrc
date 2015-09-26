@@ -47,8 +47,8 @@ alias stop="sudo systemctl stop"
 alias sdisable="sudo systemctl disable"
 alias reload="sudo systemctl daemon-reload"
 
-alias s="ssh jordon@maverick"
-alias ss="ssh jordon@ssh.hoogit.ca"
+alias s="ssh user@maverick"
+alias ss="ssh user@ssh.hoogit.ca"
 alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
 
 alias fuck='sudo $(fc -ln -1)'
