@@ -91,3 +91,5 @@ v() {
 	command="$*"
 	vagrant ssh -c "cd /vagrant && $command"
 }
+
+[ -s "/home/jordon/.dnx/dnvm/dnvm.sh" ] && . "/home/jordon/.dnx/dnvm/dnvm.sh" # Load dnvm
