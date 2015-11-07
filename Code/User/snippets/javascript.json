@@ -17,7 +17,8 @@
       "\t\t.module('${app}', [",
       "\t\t\t$1",
       "\t\t]);",
-      "}());"
+      "}());",
+      ""
     ]
   },
   "Angular Controller": {
