@@ -40,7 +40,7 @@ mkdir -p ~/.ssh
 rm ~/.ssh/*
 ln -sv $dir/ssh/authorized_keys ~/.ssh
 ln -sv $dir/ssh/config ~/.ssh
-ln -sv $dir/ssh/main.key.pub ~/.ssh/id_rsa.pub
+ln -sv $dir/ssh/main.key.pub ~/.ssh
 ln -sv $dir/ssh/github.key.pub ~/.ssh
 
 sudo rm -f $ssh_dir/sshd_config

@@ -1,20 +1,20 @@
 Host home
     Hostname ssh.hoogit.ca
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/main.key
     User user
 
 Host maverick
     Hostname maverick
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/main.key
 
 Host dev
     Hostname maverick
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/main.key
     User user
 
 Host garage
     Hostname garage
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/main.key
     User pi
 
 Host github.com
