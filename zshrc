@@ -92,5 +92,5 @@ v() {
 	vagrant ssh -c "cd /vagrant && $command"
 }
 
-export NVM_DIR="/home/user/.nvm"
+export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

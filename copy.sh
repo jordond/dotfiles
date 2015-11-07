@@ -25,6 +25,10 @@ ln -sv $dir/tmux.conf $HOME/.tmux.conf
 ln -sv $dir/git/gitconfig $HOME/.gitconfig
 ln -sv $dir/git/gitignore $HOME/.gitignore
 
+echo "Copying visual studio code settings"
+mkdir -p ~/.config/Code
+ln -sv $dir/Code/User ~/.config/Code/User
+
 echo
 echo -n "Copy over ssh files? [y/N] "
 read confirm
