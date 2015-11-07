@@ -27,8 +27,10 @@ ln -sv $dir/git/gitignore $HOME/.gitignore
 
 echo "Copying visual studio code settings"
 mkdir -p ~/.config/Code
-ln -sv $dir/Code/User ~/.config/Code/User
+rm ~/.config/Code/User
+ln -sv $dir/Code/User ~/.config/Code
 
+rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "On tmux first run press 'bind-key shift I'"
 
@@ -41,8 +43,10 @@ ln -sv $dir/ssh/config ~/.ssh
 ln -sv $dir/ssh/main.key.pub ~/.ssh/id_rsa.pub
 ln -sv $dir/ssh/github.key.pub ~/.ssh
 
-ln -sv $dir/ssh/sshd_config $ssh_dir
-ln -sv $dir/ssh/ssh_config $ssh_dir
+sudo rm -f $ssh_dir/sshd_config
+sudo rm -f $ssh_dir/ssh_config
+sudo ln -sv $dir/ssh/sshd_config $ssh_dir
+sudo ln -sv $dir/ssh/ssh_config $ssh_dir
 
 echo
 echo "All Finished."
