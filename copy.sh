@@ -29,9 +29,13 @@ echo "Copying visual studio code settings"
 mkdir -p ~/.config/Code
 ln -sv $dir/Code/User ~/.config/Code/User
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "On tmux first run press 'bind-key shift I'"
+
 echo
 echo "Linking SSH files"
 mkdir -p ~/.ssh
+rm ~/.ssh/*
 ln -sv $dir/ssh/authorized_keys ~/.ssh
 ln -sv $dir/ssh/config ~/.ssh
 ln -sv $dir/ssh/main.key.pub ~/.ssh/id_rsa.pub
