@@ -11,3 +11,16 @@ Host dev
     Hostname maverick
     IdentityFile ~/.ssh/id_rsa
     User user
+
+Host garage
+    Hostname garage
+    IdentityFile ~/.ssh/id_rsa
+    User pi
+
+Host github.com
+    User git
+    IdentityFile ~/.ssh/github.key
+
+Host bitbucket.org
+    User git
+    IdentityFile ~/.ssh/github.key
