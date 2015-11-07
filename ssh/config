@@ -6,11 +6,17 @@ Host home
 Host maverick
     Hostname maverick
     IdentityFile ~/.ssh/main.key
+    User user
 
 Host dev
     Hostname maverick
     IdentityFile ~/.ssh/main.key
     User user
+
+Host jordon
+    Hostname jordon
+    IdentityFile ~/.ssh/main.key
+    User jordon
 
 Host garage
     Hostname garage
