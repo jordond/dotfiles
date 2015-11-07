@@ -1,0 +1,13 @@
+Host home
+    Hostname ssh.hoogit.ca
+    IdentityFile ~/.ssh/id_rsa
+    User user
+
+Host maverick
+    Hostname maverick
+    IdentityFile ~/.ssh/id_rsa
+
+Host dev
+    Hostname maverick
+    IdentityFile ~/.ssh/id_rsa
+    User user
