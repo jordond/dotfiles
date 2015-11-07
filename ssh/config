@@ -14,7 +14,7 @@ Host dev
     User user
 
 Host jordon
-    Hostname jordon
+    Hostname jordond
     IdentityFile ~/.ssh/main.key
     User jordon
 
