@@ -30,13 +30,15 @@ mkdir -p ~/.config/Code
 ln -sv $dir/Code/User ~/.config/Code/User
 
 echo
-echo -n "Copy over ssh files? [y/N] "
-read confirm
-if [[ $confirm == "y" || $confirm == "Y" ]]; then
-    mkdir -p ~/.ssh
-    cp $dir/ssh/authorized_keys ~/.ssh
-    sudo cp -v $dir/ssh/* $ssh_dir
-fi
+echo "Linking SSH files"
+mkdir -p ~/.ssh
+ln -sv $dir/ssh/authorized_keys ~/.ssh
+ln -sv $dir/ssh/config ~/.ssh
+ln -sv $dir/ssh/main.key.pub ~/.ssh/id_rsa.pub
+ln -sv $dir/ssh/github.key.pub ~/.ssh
+
+ln -sv $dir/ssh/sshd_config $ssh_dir
+ln -sv $dir/ssh/ssh_config $ssh_dir
 
 echo
 echo "All Finished."
