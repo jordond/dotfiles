@@ -10,7 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh_custom
 ZSH_THEME="jordon"
 
-plugins=(git)
+plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,6 @@ esac
 
 alias code="cd $HOME/code"
 alias z="source ~/.zshrc"
-
 
 function gitclone {
 	git clone "git@github.com:$1"
@@ -53,7 +52,9 @@ alias sshx="export DISPLAY=localhost:0.0 && ssh -Y"
 
 alias fuck='sudo $(fc -ln -1)'
 alias fucking='sudo'
+
 alias install='apt-get install'
+alias ag='sudo apt-get'
 
 alias www='cd /etc/nginx/www'
 
