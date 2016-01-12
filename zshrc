@@ -15,7 +15,7 @@ plugins=(git ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-pathBase=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools
+pathBase=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools:/opt/android/sdk/platform-tools
 pathWin=:/cygdrive/c/Program\ Files/nodejs:/cygdrive/c/Users/jordon/AppData/Roaming/npm:/cygdrive/c/HashiCorp/Vagrant/bin:/cygdrive/c/adb:/cygdrive/c/Program\ Files/gradle-2.1
 
 case `uname` in
@@ -97,3 +97,6 @@ v() {
 
 export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export ANDROID_HOME="/opt/android/sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
