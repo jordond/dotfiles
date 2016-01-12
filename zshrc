@@ -25,7 +25,6 @@ esac
 
 ## Aliases
 
-alias code="cd $HOME/code"
 alias z="source ~/.zshrc"
 
 function gitclone {
@@ -37,8 +36,11 @@ function bitbucketclone {
 alias gc="gitclone"
 alias bgc="bitbucketclone"
 
+alias zz="vim ~/.zshrc"
+
 alias upgrade="sudo packer -Syu --noconfirm --noedit"
 alias uu="sudo apt-get update && sudo apt-get upgrade"
+alias ua="sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get autoremove && sudo apt-get autoclean"
 alias start="sudo systemctl start"
 alias senable="sudo systemctl enable"
 alias status="sudo systemctl -l status"
