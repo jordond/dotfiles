@@ -30,18 +30,6 @@ mkdir -p ~/.config/Code
 rm ~/.config/Code/User
 ln -sv $dir/config/Code/User ~/.config/Code
 
-echo "Linking config"
-ln -sv $dir/i3 ~/.i3
-ln -sv $dir/i3/scripts/* /usr/local/bin
-ln -sv $dir/config/gtk-3.0 ~/.config/gtk-3.0
-ln -sv $dir/compton.conf ~/.compton.conf
-ln -sv $dir/gtkrc-2.0 ~/.gtkrc-2.0
-ln -sv $dir/fehbg ~/.fehbg
-ln -sv $dir/fonts ~/.fonts
-
-sudo ln -sv $dir/i3/events/LID_i3-lid /etc/acpi/events
-sudo ln -sv $dir/i3/scripts/i3-lid.sh /etc/acpi
-
 rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "On tmux first run press 'bind-key shift I'"
