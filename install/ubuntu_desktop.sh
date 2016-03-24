@@ -3,11 +3,15 @@
 
 BASE_PACKAGES="git curl wget zsh pv ngrep dstat ncdu mtr ppa-purge unity-tweak-tool htop sshfs autossh tmux iftop iotop vim xclip tree "
 EXTRA_PACKAGES="deluge steam unrar p7zip-full"
-PPA_PACKAGES="git plank numix-icon-theme-circle numix-plank-theme numix-gtk-theme numix-folders google-chrome-beta"
+PPA_PACKAGES="git plank numix-icon-theme-circle numix-plank-theme numix-gtk-theme numix-folders"
 
-NODEJS_URL="https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh"
+I3_PACKAGES_MAKE="libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev
+"
+I3_PACKAGES_REQ="scrot feh xrandr arandr xfce4-power-manager dunst acpi imagemagick pactl i3blocks rofi ranger thunar"
+
+NODEJS_URL="https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh"
 NODE="/home/$USER/.nvm/nvm.sh"
-NODE_PACKAGES="node-inspector gulp yo bower generator-angular-fullstack generator-ng-poly"
+NODE_PACKAGES="node-inspector webpack depcheck"
 
 echo "Need Root for installing packages"
 sudo sh -c 'echo "Got Root!"'
@@ -17,8 +21,6 @@ echo "Adding PPAs..."
 sudo add-apt-repository ppa:ricotz/docky -y
 sudo add-apt-repository ppa:numix/ppa -y
 sudo add-apt-repository ppa:git-core/ppa -y
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 echo ""
 
 echo "Updating & Upgrading..."
@@ -26,19 +28,26 @@ sudo apt-get update
 sudo apt-get -y upgrade
 echo ""
 
-echo "Installing base packages..."
 sudo apt-get install -y $BASE_PACKAGES
-echo ""
-
-echo "Installing PPA packages..."
 sudo apt-get install -y $PPA_PACKAGES
-echo ""
-
-echo "Installing Extra packages..."
 sudo apt-get install -y $EXTRA_PACKAGES
-echo ""
+sudo apt-get install -y $I3_PACKAGES_MAKE
+sudo apt-get install -y $I3_PACKAGES_REQ
 
-echo "Installing tmux plugins"
+# i3gaps install
+cd /opt
+git clone https://www.github.com/Airblader/i3 i3gaps
+cd i3gaps
+git checkout gaps && git pull
+make
+sudo make install
+
+# display visor
+cd /opt
+git clone https://github.com/beanaroo/display-visor display-visor
+cd display-visor
+make install
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Installing NodeJS..."
