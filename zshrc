@@ -100,3 +100,5 @@ export NVM_DIR="/home/$USER/.nvm"
 
 export ANDROID_HOME="/opt/android/sdk"
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
+
+screenfetch
