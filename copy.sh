@@ -28,7 +28,7 @@ ln -sv $dir/git/gitignore $HOME/.gitignore
 echo "Copying visual studio code settings"
 mkdir -p ~/.config/Code
 rm ~/.config/Code/User
-ln -sv $dir/Code/User ~/.config/Code
+ln -sv $dir/config/Code/User ~/.config/Code
 
 rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

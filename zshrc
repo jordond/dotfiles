@@ -1,12 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="lukerandall"
-
 ZSH_CUSTOM=$HOME/.zsh_custom
 ZSH_THEME="jordon"
 
@@ -14,14 +8,7 @@ plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-pathBase=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools:/opt/android/sdk/platform-tools
-pathWin=:/cygdrive/c/Program\ Files/nodejs:/cygdrive/c/Users/jordon/AppData/Roaming/npm:/cygdrive/c/HashiCorp/Vagrant/bin:/cygdrive/c/adb:/cygdrive/c/Program\ Files/gradle-2.1
-
-case `uname` in
-    *CYGWIN*) export PATH=${pathBase}$pathWin ;;
-	*) export PATH=$pathBase;;
-esac
+export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools:/opt/android/sdk/platform-tools
 
 ## Aliases
 
@@ -37,6 +24,7 @@ alias gc="gitclone"
 alias bgc="bitbucketclone"
 
 alias zz="vim ~/.zshrc"
+alias i3="vim ~/.i3/config"
 
 alias upgrade="sudo packer -Syu --noconfirm --noedit"
 alias uu="sudo apt-get update && sudo apt-get upgrade"
@@ -94,6 +82,9 @@ v() {
 	command="$*"
 	vagrant ssh -c "cd /vagrant && $command"
 }
+
+BASE16_SHELL="$HOME/.config/oceanic-next-shell/oceanic-next.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export NVM_DIR="/home/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

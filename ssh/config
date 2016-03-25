@@ -18,6 +18,14 @@ Host garage
     Hostname garage
     User pi
 
+Host hollywood
+    Hostname jordondehoog.ca
+    User user
+
+Host webserver
+    Hostname jordondehoog.ca
+    User user
+
 Host github.com
     User git
     IdentityFile ~/.ssh/github.key
