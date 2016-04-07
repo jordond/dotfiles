@@ -43,6 +43,7 @@ make
 sudo make install
 
 # display visor
+# TODO Fork display visor, as the default is not what my setup is.
 cd /opt
 git clone https://github.com/beanaroo/display-visor display-visor
 cd display-visor
