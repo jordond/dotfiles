@@ -196,6 +196,12 @@ exec_always --no-startup-id i3-reload.sh
 # Move workspaces
 bindsym Control+Mod1+Down move workspace to output down
 bindsym Control+Mod1+Up move workspace to output up
+bindsym Control+Mod1+Left move workspace to output left
+bindsym Control+Mod1+Right move workspace to output right
+
+# Show the first scratchpad window
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
