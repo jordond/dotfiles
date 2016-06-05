@@ -8,7 +8,7 @@ plugins=(git ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.composer/vendor/bin:~/Android/Sdk/platform-tools:/opt/android/sdk/platform-tools
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/Android/Sdk/platform-tools:/opt/android/sdk/platform-tools
 
 ## Aliases
 
@@ -45,6 +45,8 @@ alias fucking='sudo'
 
 alias install='apt-get install'
 alias ag='sudo apt-get'
+
+alias port='netstat -tulpn | grep :'
 
 alias www='cd /etc/nginx/www'
 

@@ -17,25 +17,20 @@ then
     RY=$(echo $R | cut -d' ' -f 3)
 
     lid_state=$(cat /proc/acpi/button/lid/LID0/state 2>/dev/null | awk '{print $NF}')
-    if [ -z "$lid_state" -o "$lid_state" == "closed" ]; then
-        convert "$tmpbg" "$icon" -gravity center -composite -matte "$tmpbg"
-        echo "Single monitor done"
-    else
-        SR=$(xrandr --query | grep ' connected' | sed 's/primary //' | cut -f3 -d' ')
-        for RES in $SR
-        do
-            # monitor position/offset
-            SRX=$(echo $RES | cut -d'x' -f 1)                   # x pos
-            SRY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 1)  # y pos
-            SROX=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 2) # x offset
-            SROY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 3) # y offset
-            PX=$(($SROX + $SRX/2 - $RX/2))
-            PY=$(($SROY + $SRY/2 - $RY/2))
+    SR=$(xrandr --query | grep ' connected' | sed 's/primary //' | cut -f3 -d' ')
+    for RES in $SR
+    do
+        # monitor position/offset
+        SRX=$(echo $RES | cut -d'x' -f 1)                   # x pos
+        SRY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 1)  # y pos
+        SROX=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 2) # x offset
+        SROY=$(echo $RES | cut -d'x' -f 2 | cut -d'+' -f 3) # y offset
+        PX=$(($SROX + $SRX/2 - $RX/2))
+        PY=$(($SROY + $SRY/2 - $RY/2))
 
-            convert "$tmpbg" "$icon" -geometry +$PX+$PY -composite -matte  "$tmpbg"
-            echo "Multiple monitors done"
-        done
-    fi
+        convert "$tmpbg" "$icon" -geometry +$PX+$PY -composite -matte  "$tmpbg"
+        echo "Multiple monitors done"
+    done
 fi
 
 # Finally lock
