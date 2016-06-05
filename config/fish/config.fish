@@ -42,6 +42,6 @@ end
 start_agent
 
 # Set theme
-eval sh $HOME/.config/fish/base16-railcasts.dark.sh
+eval sh $HOME/dotfiles/colors/base16-default.dark.sh
 
 screenfetch
