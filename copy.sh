@@ -19,12 +19,6 @@ mkdir -p ~/.config/Code
 rm ~/.config/Code/User
 ln -sv $dir/config/Code/User ~/.config/Code
 
-echo "Copying fish settings"
-ln -sv $dir/config/fish/fishfile ~/.config/fish/fishfile
-ln -sv $dir/config/fish/config.fish ~/.config/fish/config.fish
-ln -sv $dir/config/fish/base16-railcasts.dark.sh ~/.config/fish/base16-railcasts.dark.sh
-ln -sv $dir/config/fish/functions/start_agent.fish ~/.config/fish/functions/start_agent.fish
-
 
 rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

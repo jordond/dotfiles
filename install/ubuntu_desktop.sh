@@ -26,10 +26,5 @@ sudo apt-get install -y $EXTRA_PACKAGES
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
-curl -Lo ~/.config/fish/functions/fin.fish --create-dirs git.io/fin
-
-fish && omf install eclm
-
 echo ""
 echo "Script is all done, hopefully it all went well."
