@@ -9,10 +9,6 @@ I3_PACKAGES_MAKE="libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-d
 "
 I3_PACKAGES_REQ="scrot feh xrandr arandr xfce4-power-manager dunst acpi imagemagick pactl i3blocks rofi ranger thunar"
 
-NODEJS_URL="https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh"
-NODE="/home/$USER/.nvm/nvm.sh"
-NODE_PACKAGES="node-inspector webpack depcheck"
-
 echo "Need Root for installing packages"
 sudo sh -c 'echo "Got Root!"'
 
@@ -50,23 +46,6 @@ cd display-visor
 make install
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-echo "Installing NodeJS..."
-wget -qO- $NODEJS_URL | bash
-echo ""
-
-NODE install node
-NODE alias default node
-
-source ~/.zshrc
-
-echo -n "Would you like to install the node packages? [Y/n] "
-read confirm
-if [[ $confirm == "Y" || $confirm == "y" || $confirm == "" ]]; then
-  echo "Installing Node packages..."
-  echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-  npm install -g $NODE_PACKAGES
-fi
 
 echo ""
 echo "Script is all done, hopefully it all went well."
