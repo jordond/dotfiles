@@ -186,6 +186,7 @@ for_window [class="^.*"] border pixel 3
 exec --no-startup-id xautolock -time 15 -locker "i3-lock.sh"
 exec --no-startup-id xset dpms 1500 1500 1500
 exec --no-startup-id nm-applet &
+exec --no-startup-id xbindkeys
 #exec --no-startup-id devmon --sync --exec-on-drive "notify-send 'Automount' '%l is now mounted at %d.'" --exec-on-remove "notify-send 'Automount' '%l has been removed.'"
 exec --no-startup-id xrdb -merge ~/.Xresources
 
@@ -223,6 +224,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id i3-volume.sh --increase
 bindsym XF86AudioLowerVolume exec --no-startup-id i3-volume.sh --decrease
 bindsym XF86AudioMute exec --no-startup-id i3-volume.sh --mute
 
+bindsym Control+$mod+Up exec --no-startup-id i3-volume.sh --increase
+bindsym Control+$mod+Down exec --no-startup-id i3-volume.sh --decrease
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -246,6 +250,7 @@ bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -show 
 bindsym $mod+c exec google-chrome
 bindsym $mod+p exec --no-startup-id google-chrome --show-app-list
 for_window [instance="chrome_app_list" window_role="bubble"] floating enable
+for_window [class="Solaar"] floating enable
 
 # launch default programs
 exec google-chrome

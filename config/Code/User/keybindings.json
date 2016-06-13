@@ -5,5 +5,7 @@
   },
   {
     "key": "ctrl+shift+up", "command": "editor.action.copyLinesUpAction", "when": "editorTextFocus"
-  }
+  },
+  { "key": "ctrl+shift+alt+f",   "command": "eslint.fixAllProblems",
+                                     "when": "editorTextFocus" }
 ]
