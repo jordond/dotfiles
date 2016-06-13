@@ -33,3 +33,7 @@ Host github.com
 Host bitbucket.org
     User git
     IdentityFile ~/.ssh/github.key
+
+Host blackhole
+    Hostname blackhole
+    User pi

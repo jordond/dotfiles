@@ -1,0 +1,7 @@
+{
+  "ES6 Import": {
+    "prefix": "imp",
+    "description": "ES6 import select from",
+    "body": "import { $1 } from '$2'"
+  }
+}
